@@ -1,0 +1,127 @@
+.banner {
+    background: url(../images/advantage-banner.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.advantage-box ul li {
+    display: flex;
+    width: 100%;
+    margin-bottom: 35px;
+}
+
+.advantage-box ul li:nth-of-type(even) {
+    flex-direction: row-reverse;
+}
+
+.advantage-box ul li .l {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: #E6F5FB;
+}
+
+.advantage-box ul li .l img {
+    transition: all .5s;
+}
+
+.advantage-box ul li .l img:hover {
+    transform: scale(1.1);
+}
+
+.advantage-box ul li .r {
+    position: relative;
+    width: 50%;
+    background-color: #F7F7F7;
+    padding: 80px 0 80px 50px;
+}
+
+.advantage-box ul li .r h1 {
+    font-size: 26px;
+	letter-spacing: 1px;
+	color: #333333;
+    margin-bottom: 18px;
+}
+
+.advantage-box ul li .r h2 {
+    font-size: 14px;
+    letter-spacing: 1px;
+	color: #999999;
+	opacity: 0.7;
+    margin-bottom: 14px;
+}
+
+.advantage-box ul li .r .xian {
+    margin-bottom: 0 !important;
+}
+
+.advantage-box ul li .r .p-box {
+    padding-top: 25px;
+}
+
+.advantage-box ul li .r .p-box p {
+    position: relative;
+    letter-spacing: 1px;
+	color: #666666;
+    padding-left: 13px;
+    margin-bottom: 14px;
+}
+
+.advantage-box ul li .r .p-box p::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 4px;
+    background-color: #666666;
+}
+
+.advantage-box ul li .r .note {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 50px;
+    width: 77px;
+    height: 93px;
+    background: url(../images/advantage-icon.png) no-repeat;
+    background-size: 100% 100%;
+    font-size: 32px;
+    color: #fff;
+    padding-top: 5px;
+}
+
+@media (max-width: 768px) {
+    .banner {
+        height: 150px;
+        background-size: cover;
+        background-position: left;
+    }
+
+    .advantage-box ul li {
+        flex-direction: column;
+    }
+
+    .advantage-box ul li .l {
+        width: 100%;
+    }
+
+    .advantage-box ul li .r {
+        width: 100%;
+        padding: 35px 0 35px 25px;
+    }
+
+    .advantage-box ul li:nth-of-type(even) {
+        flex-direction: column; 
+    }
+
+    .advantage-box ul li:nth-of-type(2) .l {
+        padding: 30px 30px;
+    }
+
+    .advantage-box ul li:nth-of-type(2) .l img {
+        width: 100%;
+    }
+}

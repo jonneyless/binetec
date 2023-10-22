@@ -1,0 +1,103 @@
+body {
+    background-color: #F7F6F6;   
+}
+.banner {
+    background: url(../images/recruit-banner.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.recruit-box ul {
+    margin-top: 50px;
+    background-color: #fff;
+    padding: 50px 115px 65px 115px;
+}
+
+.recruit-box ul li .position {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    color: #666;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ececec;
+    box-sizing: border-box;
+}
+
+.recruit-box ul li .position .btn .zhankai-icon {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #999;
+}
+
+.recruit-box ul li .position .btn .shouqi-icon {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #0753a5;
+}
+
+.recruit-box ul li .position .btn img {
+    margin-left: 10px;
+}
+
+.recruit-box ul li .zhankai {
+    display: none;
+    padding-top: 30px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #ececec;
+}
+
+.recruit-box ul li .zhankai h1 {
+    font-size: 16px;
+    color: #0753a5;
+    padding-bottom: 20px;
+}
+
+.recruit-box ul li .zhankai h1:nth-last-of-type(1) {
+    padding-bottom: 0;
+}
+
+.recruit-box ul li .zhankai .fuli {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-bottom: 10px;
+}
+
+.recruit-box ul li .zhankai .fuli div {
+    margin: 0 8px;
+    width: 23.6%;
+    background-color: #0c9fdc;
+	border-radius: 8px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.recruit-box ul li .zhankai p {
+    line-height: 30px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .banner {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .recruit-box ul {
+        padding: 35px;
+    }
+
+    .recruit-box ul {
+        margin-top: 0;
+    }
+}
+

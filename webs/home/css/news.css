@@ -1,0 +1,155 @@
+.banner {
+    background: url(../images/news-banner.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.news-box ul {
+    margin-top: 70px;
+    border-top: 1px solid #d6dcea;
+}
+
+.news-box ul li {
+    margin-top: 45px;
+    padding-bottom: 45px;
+    border-bottom: 1px solid #d6dcea;
+}
+
+.news-box ul li a {
+    display: flex;
+    justify-content: space-between;
+}
+
+.news-box ul li a .l {
+    width: 38%;
+}
+
+.news-box ul li a .c {
+    
+}
+
+.news-box ul li a .c .date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 18px;
+    border: solid 1px #d6dcea;
+    color: #4f6ed8;
+    margin-left: 50px;
+}
+
+.news-box ul li a .c p {
+    font-size: 35px;
+}
+
+.news-box ul li a .c span {
+    font-size: 16px;
+}
+
+.news-box ul li a .r {
+    width: 41%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.news-box ul li a .r h1 {
+    font-size: 24px;
+	font-weight: bold;
+	line-height: 42px;
+	color: #333333;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; 
+    overflow: hidden;
+}
+
+.news-box ul li a .r p {
+    font-size: 14px;
+	line-height: 24px;
+	color: #999999;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; 
+    overflow: hidden;
+}
+
+.news-box ul li a .r span {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #0753a5;
+    justify-content: center;
+    width: 182px;
+    padding: 12px 0;
+    font-size: 16px;
+    color: #fff;
+
+}
+
+.news-box ul li a .r .more {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 1399px) {
+    .news-box ul li a .l img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1199px) {
+    .news-box ul li a .r h1 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .news-box ul li a .c .date {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 999px) {
+    .news-box ul li a .c {
+        display: none;
+    }
+
+    .news-box ul li a .r {
+        width: 57%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .banner {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .news-box ul li a {
+        flex-direction: column;
+    }
+
+    .news-box ul li a .l {
+        width: 100%;
+    }
+
+    .news-box ul li a .r {
+        width: 100%;
+    }
+
+    .news-box ul li a .r h1 {
+        margin-top: 20px;
+    }
+
+    .news-box ul li a .r p {
+        margin-top: 10px;
+    }
+
+    .news-box ul li a .r span {
+        margin-top: 20px;
+    }
+
+    .news-box ul {
+        margin-top: 35px;
+    }
+}

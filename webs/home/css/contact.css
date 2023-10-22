@@ -1,0 +1,165 @@
+.banner {
+    background: url(../images/contact-banner.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+
+.contact-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 80px;
+}
+
+.contact-box .l h1 {
+    position: relative;
+    font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	color: #0753a5;
+}
+
+.contact-box .l h2 {
+    position: relative;
+    margin-top: 5px;
+    font-size: 12px;
+	color: #0753a5;
+	opacity: 0.6;
+}
+
+.contact-box .l h1::after {
+    position: absolute;
+    content: '';
+    bottom: -32px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #0753a5;
+}
+
+.contact-box .l .adress-box {
+    margin-top: 65px;
+}
+
+.contact-box .l .adress-box ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #666;
+}
+
+.contact-box .l .adress-box ul li:nth-last-of-type(1) {
+    margin-bottom: 0;
+}
+
+.contact-box .l .adress-box ul li img {
+    margin-right: 10px;
+}
+
+.contact-box .r {
+    width: 749px;
+}
+
+#map {
+    width: 100%;
+    height: 449px;
+}
+
+.message {
+    padding-top: 52px;
+}
+
+.message form {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+}
+
+.message input {
+    width: 48%;
+    font-size: 16px;
+    padding: 20px 0 20px 16px;
+    margin-right: 30px;
+    border: solid 1px #999999;
+    box-sizing: border-box;
+    outline: none;
+    margin-bottom: 25px;
+}
+
+.message input:nth-of-type(even) {
+    margin-right: 0;
+}
+
+.message textarea {
+    position: relative;
+    width: 100%;
+    height: 417px;
+    padding: 20px 20px 20px 16px;
+    font-size: 16px;
+    border: solid 1px #999999;
+    outline: none;
+}
+
+.message form button {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    font-size: 16px;
+    color: #fafafa;
+    padding: 13px 23px;
+    background-color: #0753a5;
+}
+
+@media (max-width: 1199px) {
+    .contact-box {
+        flex-direction: column;
+    }
+
+    .contact-box .l {
+        width: 100%;
+    }
+
+    .contact-box .r {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .message input {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .characteristic h1 {
+        padding-top: 30px;
+    }
+
+    .characteristic-box {
+        padding-bottom: 20px;
+    }
+
+    .contact-box .l .adress-box {
+        margin-top: 30px;
+    }
+
+    .contact-box {
+        padding-bottom: 0;
+    }
+
+    .message {
+        padding-top: 0;
+    }
+    
+    .message form {
+        margin-bottom: 40px;
+    }
+}
