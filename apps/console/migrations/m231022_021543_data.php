@@ -2,6 +2,7 @@
 
 use admin\models\Admin;
 use admin\models\AdminRole;
+use admin\models\Category;
 use admin\models\Menu;
 use yii\db\Migration;
 
@@ -39,6 +40,34 @@ class m231022_021543_data extends Migration
 (7, 0, '分类', 'object-group', 0, '0', '7', 'category', 'index', '', '', 0, 9),
 (8, 0, '产品', 'cubes', 0, '0', '8', 'product', 'index', '', '', 0, 9),
 (9, 0, '新闻', 'newspaper-o', 0, '0', '9', 'news', 'index', '', '', 0, 9);");
+
+        $category = new Category();
+        $category->name = '车船系统';
+        $category->slug = 'VEHICLE SHIP SYSTEM';
+        $category->save();
+
+        $category = new Category();
+        $category->name = '储能系统';
+        $category->slug = 'ENERGY STORAGE SYSTEM';
+        $category->save();
+
+        $category = new Category();
+        $category->name = '仓储系统';
+        $category->slug = 'WAREHOUSING SYSTEM';
+        $category->save();
+
+        $category = new Category();
+        $category->name = '其他系统';
+        $category->slug = 'OTHER SYSTEM';
+        $category->save();
+
+        $this->execute("INSERT INTO `config` (`key`, `value`, `description`) VALUES 
+('company_address', '江苏省苏州市相城区南天成路高清传媒大厦', '公司地址'),
+('company_email', 'zhuping.xu@binetgroup.com', '公司邮箱'),
+('company_name_cn', '苏州比耐新能源科技有限公司', '公司名称'),
+('company_name_en', 'Binet（Suzhou）Energy Technology Co., Ltd.', '公司英文名'),
+('company_telephone', '0512-69220109', '公司电话'),
+('company_website', 'http://www.binetec.net', '公司网址');");
     }
 
     /**
