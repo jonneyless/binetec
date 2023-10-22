@@ -5,7 +5,7 @@ namespace common\models;
 use Yii;
 
 /**
- * This is the model class for table "admin_auth".
+ * This is the model class for table "{{%admin_auth}}".
  *
  * @property string $key 标识
  * @property string $name 名称
@@ -20,7 +20,7 @@ class AdminAuth extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'admin_auth';
+        return '{{%admin_auth}}';
     }
 
     /**

@@ -59,6 +59,14 @@ class m130524_201442_init extends Migration
             'status' => $this->smallInteger(1)->notNull()->defaultValue(0)->comment('状态'),
         ], $tableOptions . " COMMENT='菜单'");
 
+        $this->createTable('{{%config}}', [
+            'key' => $this->string()->unique()->notNull()->comment('配置Key'),
+            'value' => $this->string()->notNull()->comment('配置值'),
+            'description' => $this->string()->notNull()->comment('描述'),
+        ], $tableOptions . ' COMMENT="系统配置"');
+
+        $this->addPrimaryKey('Set Key', '{{%config}}', 'key');
+
         $this->createTable('{{%category}}', [
             'id' => $this->bigPrimaryKey()->unsigned()->comment('分类 ID'),
             'parent_id' => $this->bigInteger()->unsigned()->notNull()->defaultValue(0)->comment('父级分类'),
@@ -81,6 +89,17 @@ class m130524_201442_init extends Migration
             'specification' => $this->text()->comment('规格'),
             'status' => $this->smallInteger(1)->unsigned()->notNull()->defaultValue(0)->comment('状态'),
         ], $tableOptions . ' COMMENT="产品"');
+
+        $this->createTable('{{%news}}', [
+            'id' => $this->bigPrimaryKey()->unsigned()->comment('新闻 ID'),
+            'name' => $this->string(60)->notNull()->comment('名称'),
+            'slug' => $this->string()->unique()->comment('识别字串'),
+            'preview' => $this->string()->notNull()->defaultValue('')->comment('主图'),
+            'content' => $this->text()->comment('内容'),
+            'created_at' => $this->integer()->notNull()->defaultValue(0)->comment('发布时间'),
+            'updated_at' => $this->integer()->notNull()->defaultValue(0)->comment('更新时间'),
+            'status' => $this->smallInteger(1)->unsigned()->notNull()->defaultValue(0)->comment('状态'),
+        ], $tableOptions . ' COMMENT="新闻"');
     }
 
     public function down()
@@ -89,7 +108,9 @@ class m130524_201442_init extends Migration
         $this->dropTable('{{%admin_auth}}');
         $this->dropTable('{{%admin_role}}');
         $this->dropTable('{{%menu}}');
+        $this->dropTable('{{%config}}');
         $this->dropTable('{{%category}}');
         $this->dropTable('{{%product}}');
+        $this->dropTable('{{%news}}');
     }
 }

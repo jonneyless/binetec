@@ -8,9 +8,21 @@ use yii\helpers\ArrayHelper;
 use yii\helpers\Url;
 
 /**
- * 后台菜单数据模型
+ * This is the model class for table "{{%menu}}".
  *
- * {@inheritdoc}
+ * @property int $id 菜单 ID
+ * @property int $parent_id 父级
+ * @property string $name 名称
+ * @property string $icon 图标
+ * @property int $child 有子级
+ * @property string $parent_arr 父级链
+ * @property string|null $child_arr 子级群
+ * @property string $controller 控制器
+ * @property string $action 方法
+ * @property string $params 参数
+ * @property string $auth_item 权限
+ * @property int $sort 排序
+ * @property int $status 状态
  */
 class Menu extends \common\models\Menu
 {

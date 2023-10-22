@@ -9,7 +9,7 @@ use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 
 /**
- * This is the model class for table "category".
+ * This is the model class for table "{{%category}}".
  *
  * @property int $id 分类 ID
  * @property int $parent_id 父级分类

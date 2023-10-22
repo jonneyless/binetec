@@ -3,6 +3,7 @@
 /** @var yii\web\View $this */
 
 use home\assets\PageAsset;
+use home\models\Config;
 
 $this->title = '联系我们';
 
@@ -31,25 +32,25 @@ PageAsset::register($this)->init([
 
     <div class="contact-box w_c">
         <div class="l">
-            <h1>苏州比耐新能源科技有限公司</h1>
-            <h2>Binet（Suzhou）Energy Technology Co., Ltd.</h2>
+            <h1><?= Config::getConfig('company_name_cn') ?></h1>
+            <h2><?= Config::getConfig('company_name_en') ?></h2>
             <div class="adress-box">
                 <ul>
                     <li>
                         <img src="/images/daohang-icon.png" alt="">
-                        <p>地址：江苏省苏州市相城区南天成路高清传媒大厦</p>
+                        <p>地址：<?= Config::getConfig('company_address') ?></p>
                     </li>
                     <li>
                         <img src="/images/tel-icon.png" alt="">
-                        <p>电话：0512-69220109</p>
+                        <p>电话：<?= Config::getConfig('company_telephone') ?></p>
                     </li>
                     <li>
                         <img src="/images/email-icon.png" alt="">
-                        <p>邮箱：zhuping.xu@binetgroup.com</p>
+                        <p>邮箱：<?= Config::getConfig('company_email') ?></p>
                     </li>
                     <li>
                         <img src="/images/diqiu-icon.png" alt="">
-                        <p>网址：http://www.binetec.net</p>
+                        <p>网址：<?= Config::getConfig('company_website') ?></p>
                     </li>
                 </ul>
             </div>

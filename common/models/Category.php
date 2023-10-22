@@ -5,7 +5,7 @@ namespace common\models;
 use Yii;
 
 /**
- * This is the model class for table "category".
+ * This is the model class for table "{{%category}}".
  *
  * @property int $id 分类 ID
  * @property int $parent_id 父级分类
@@ -24,7 +24,7 @@ class Category extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'category';
+        return '{{%category}}';
     }
 
     /**

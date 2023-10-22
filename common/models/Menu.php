@@ -5,7 +5,7 @@ namespace common\models;
 use Yii;
 
 /**
- * This is the model class for table "menu".
+ * This is the model class for table "{{%menu}}".
  *
  * @property int $id 菜单 ID
  * @property int $parent_id 父级
@@ -28,7 +28,7 @@ class Menu extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'menu';
+        return '{{%menu}}';
     }
 
     /**

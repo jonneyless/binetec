@@ -7,9 +7,14 @@ use Yii;
 use yii\helpers\ArrayHelper;
 
 /**
- * 管理员角色数据模型
+ * This is the model class for table "{{%admin_role}}".
  *
- * {@inheritdoc}
+ * @property int $id 角色 ID
+ * @property string $name 名称
+ * @property string $description 说明
+ * @property string|null $auth 权限
+ * @property string|null $route 路由
+ * @property int $status 状态
  *
  * @property array $authArr write-only
  * @property array $routeArr write-only

@@ -52,10 +52,10 @@ class News extends \common\models\News
         return Image::getImg($this->preview, $width, $height);
     }
 
-    public function getSummary()
+    public function getSummary(int $len = 150)
     {
         $content = strip_tags($this->content);
 
-        return Utils::substr($content, 0, 150);
+        return Utils::substr($content, 0, $len);
     }
 }

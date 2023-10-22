@@ -6,9 +6,13 @@ use Yii;
 use yii\helpers\ArrayHelper;
 
 /**
- * 管理权限数据模型
+ * This is the model class for table "{{%admin_auth}}".
  *
- * {@inheritdoc}
+ * @property string $key 标识
+ * @property string $name 名称
+ * @property string $parent 父级
+ * @property string $description 说明
+ * @property string $route 路由
  */
 class AdminAuth extends \common\models\AdminAuth
 {

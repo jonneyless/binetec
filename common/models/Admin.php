@@ -5,7 +5,7 @@ namespace common\models;
 use Yii;
 
 /**
- * This is the model class for table "admin".
+ * This is the model class for table "{{%admin}}".
  *
  * @property int $id 用户 ID
  * @property int $role_id 角色 ID
@@ -24,7 +24,7 @@ class Admin extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'admin';
+        return '{{%admin}}';
     }
 
     /**

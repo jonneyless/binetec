@@ -11,7 +11,7 @@ use yii\behaviors\TimestampBehavior;
 use yii\helpers\ArrayHelper;
 
 /**
- * This is the model class for table "news".
+ * This is the model class for table "{{%news}}".
  *
  * @property int $id 新闻 ID
  * @property string $name 名称
