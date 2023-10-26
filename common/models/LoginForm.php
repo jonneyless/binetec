@@ -2,7 +2,7 @@
 
 namespace common\models;
 
-use admin\models\admin;
+use admin\models\Admin;
 use Yii;
 use yii\base\Model;
 
